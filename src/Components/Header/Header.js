@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Container } from '@mui/material';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -54,43 +55,45 @@ function Header(props) {
                 boxShadow: 'none',
                 mt: 2
             }}>
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    {/* <Typography
+                <Container>
+                    <Toolbar>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={handleDrawerToggle}
+                            sx={{ mr: 2, display: { sm: 'none' } }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        {/* <Typography
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
                         MUI
                     </Typography> */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-                        <img src='https://i.ibb.co/JsvBDwD/logo.png'
-                            alt=''
-                            style={{
-                                width: '150px',
-                            }} />
-                    </Box>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
-                            <Button key={item} sx={{ color: 'primary.main' }} variant='text'>
-                                {item}
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+                            <img src='https://i.ibb.co/JsvBDwD/logo.png'
+                                alt=''
+                                style={{
+                                    width: '150px',
+                                }} />
+                        </Box>
+                        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            {navItems.map((item) => (
+                                <Button key={item} sx={{ color: 'primary.main' }} variant='text'>
+                                    {item}
+                                </Button>
+                            ))}
+                            <Button sx={{
+                                bgcolor: 'primary.green'
+                            }}>
+                                Login
                             </Button>
-                        ))}
-                        <Button sx={{
-                            bgcolor: 'primary.green'
-                        }}>
-                            Login
-                        </Button>
-                    </Box>
-                </Toolbar>
+                        </Box>
+                    </Toolbar>
+                </Container>
             </AppBar>
             <Box component="nav">
                 <Drawer
