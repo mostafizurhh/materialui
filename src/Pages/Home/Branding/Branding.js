@@ -6,6 +6,7 @@ const BrandingWrapper = styled(Box)(({ theme }) => ({
     backgroundColor: 'rgba(122,178,89,0.15)',
     padding: theme.spacing(4),
     marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
     display: 'flex',
     justifyContent: 'space-between',
     // alignItems: 'center',
@@ -15,7 +16,7 @@ const BrandingWrapper = styled(Box)(({ theme }) => ({
 
 const Branding = () => {
     return (
-        <BrandingWrapper sx={{ flexDirection: ['column-reverse', 'row'], clipPath: ['inherit', 'polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%)'], height: ['100%', '50vh', '60vh', '70vh'] }}>
+        <BrandingWrapper sx={{ flexDirection: ['column-reverse', 'row'], clipPath: ['inherit', 'polygon(0% 0%, 100% 0%, 100% 82%, 0% 100%)'], height: ['100%', '50vh', '55vh', '65vh'] }}>
             <Stack spacing={5}>
                 <Typography sx={{
                     fontWeight: 'bold',
