@@ -23,7 +23,7 @@ const Branding = () => {
                     fontSize: '2rem',
                     lineHeight: '1.2',
                 }}>
-                    Let’s Grow <br /> Your Brand <br /> To The Next Level
+                    Let’s <span style={{ color: '#7AB259' }}>Grow</span> <br />  <span style={{ color: '#7AB259' }}>Your</span> Brand<br /> To The <span style={{ color: '#7AB259' }}>Next Level</span>
                 </Typography>
 
                 <Typography sx={{
