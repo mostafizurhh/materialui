@@ -56,13 +56,14 @@ function Header(props) {
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component="nav" sx={{
-                backgroundColor: 'transparent',
-                boxShadow: 'none',
-                mt: 2,
-                p: 0,
-                position: 'static'
+                backgroundColor: 'primary.yellow',
+                py: 2
+                //boxShadow: 'none',
+                //mt: 2,
+                //p: '0 20',
+                //position: 'fixed',
             }}>
-                <Container sx={{ '& .MuiToolbar-root': { padding: '0px' } }}>
+                <Container sx={{ '& .MuiToolbar-root': { padding: '0px' }, }}>
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', }}>
                         <IconButton
                             color="inherit"
@@ -74,14 +75,14 @@ function Header(props) {
                             <MenuIcon />
                         </IconButton>
 
-                        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Box sx={{ display: { xs: 'none', sm: 'block' }, }}>
                             <img src='https://i.ibb.co/JsvBDwD/logo.png'
                                 alt=''
                                 style={{
                                     width: '150px',
                                 }} />
                         </Box>
-                        <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, }}>
                             {navItems.map((item) => (
                                 <Button key={item} sx={{
                                     color: 'primary.main',
