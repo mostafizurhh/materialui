@@ -16,7 +16,7 @@ const Services = () => {
             <Grid container spacing={2}>
                 {
                     serviceImages.map((image, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index} sx={{ '& :hover': { boxShadow: '0 0 10px 0 rgba(0,0,0,1)' } }}>
+                        <Grid item xs={12} sm={6} md={4} key={index} sx={{ '& :hover': { boxShadow: '0 0 10px 0 rgba(0,0,0,1)' }, marginTop: '4rem' }}>
                             <Service
                                 key={index}
                                 image={image}

@@ -9,7 +9,7 @@ const SectionTitle = ({ title, colored }) => {
                 fontSize: '34px',
                 fontWeight: 'bold',
                 textAlign: 'center',
-                marginBottom: '4rem'
+                // marginBottom: '4rem'
             }}>
                 {title} {' '}
                 {
