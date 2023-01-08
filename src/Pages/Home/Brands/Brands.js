@@ -12,20 +12,18 @@ const brands = [
 const BrandWrapper = styled(Box)(({ theme }) => ({
     marginBottom: '4rem',
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     alignItems: 'center',
     '& > img': {
         height: '50px',
-        // width: ['20vw', '10vw'],
-        width: '110px'
+        width: '100px'
     },
-    // [theme.breakpoints.down('sm')]: {
-    //     flexDirection: 'column',
-    //     '& > img': {
-    //         marginBottom: '1rem'
-    //     }
-    // },
+    [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column',
+        '& > img': {
+            marginBottom: '1rem'
+        }
+    },
 
 }))
 const Brands = () => {

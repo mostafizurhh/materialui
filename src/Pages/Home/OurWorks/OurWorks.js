@@ -1,9 +1,11 @@
 import React from 'react';
-import { Box, IconButton } from '@mui/material';
+import { Box, Grid, IconButton } from '@mui/material';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CreativeCard from '../../../Components/CreativeCard/CreativeCard';
+import { cardData } from './cardData';
 
 const OurWorks = () => {
     const [value, setValue] = React.useState(0);
@@ -18,10 +20,13 @@ const OurWorks = () => {
             {/* heading section */}
             <Box sx={{
                 display: 'flex',
+                flexDirection: ['column', 'column', 'row'],
                 justifyContent: 'space-between',
-                alignItems: 'center'
+                alignItems: 'center',
+                marginBottom: '4rem'
             }}>
-                <SectionTitle title='Here are some of' colored='our works' />
+                <SectionTitle title='Here are some of' colored='our works'
+                />
                 <Box sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
@@ -31,7 +36,7 @@ const OurWorks = () => {
                     <Tabs value={value} onChange={handleChange} centered
                         sx={{
                             '& .Mui-selected': {
-                                fontWeight: 'bold'
+                                fontWeight: 'bold',
                             },
 
                             '& .MuiButtonBase-root': {
@@ -40,29 +45,45 @@ const OurWorks = () => {
                             },
                         }}>
                         <Tab label="All" />
-                        <Tab label="Interior" />
-                        <Tab label="Exterior" />
-                        <Tab label="Building" />
+                        <Tab label="Web Design" />
+                        <Tab label="Mobile App" />
                     </Tabs>
-                    <Box>
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                    }}>
                         <IconButton sx={{
-                            border: `1px solid #959EAD`,
-                            mr: 2
+                            //border: `1px solid #959EAD`,
+                            border: theme => `1px solid ${value === 0 ? '#959EAD' : theme.palette.primary.main}`,
+                            mr: 2,
+                            color: 'primary.main'
                         }}
                             onClick={() => setValue(value - 1)}
                             disabled={value === 0}>
                             <ArrowBackIcon></ArrowBackIcon>
                         </IconButton>
                         <IconButton sx={{
-                            border: `1px solid #959EAD`
+                            border: theme => `1px solid ${value === 2 ? '#959EAD' : theme.palette.primary.main}`,
+                            color: 'primary.main'
                         }}
                             onClick={() => setValue(value + 1)}
-                            disabled={value === 3}>
+                            disabled={value === 2}>
                             <ArrowBackIcon sx={{ transform: 'rotate(180deg)' }}></ArrowBackIcon>
                         </IconButton>
                     </Box>
                 </Box>
             </Box>
+            {/* card section */}
+            <Grid container spacing={4}>
+                {
+                    cardData[value].map((image, index) => (
+                        <Grid item key={index} xs={12} sm={6} lg={4} >
+                            <CreativeCard image={image}></CreativeCard>
+                        </Grid>
+                    ))
+                }
+            </Grid>
         </Box>
     );
 };

@@ -13,10 +13,10 @@ const Services = () => {
     return (
         <Box>
             <SectionTitle title='Provide Awesome' colored='Services'></SectionTitle>
-            <Grid container spacing={2}>
+            <Grid container spacing={4} marginTop='4rem'>
                 {
                     serviceImages.map((image, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index} sx={{ '& :hover': { boxShadow: '0 0 10px 0 rgba(0,0,0,1)' }, marginTop: '4rem' }}>
+                        <Grid item xs={12} sm={6} md={4} key={index} >
                             <Service
                                 key={index}
                                 image={image}

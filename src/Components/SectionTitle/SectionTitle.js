@@ -6,7 +6,7 @@ const SectionTitle = ({ title, colored }) => {
     return (
         <Box>
             <Typography sx={{
-                fontSize: '34px',
+                fontSize: ['28px', '34px'],
                 fontWeight: 'bold',
                 textAlign: 'center',
                 // marginBottom: '4rem'
@@ -14,7 +14,7 @@ const SectionTitle = ({ title, colored }) => {
                 {title} {' '}
                 {
                     colored && (
-                        <span style={{ color: '#7AB259' }}>{colored}</span>
+                        <span style={{ color: '#6b8f55' }}>{colored}</span>
                     )
                 }
             </Typography>

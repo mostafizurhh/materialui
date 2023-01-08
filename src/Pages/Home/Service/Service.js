@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 const Service = ({ image }) => {
     return (
-        <Card sx={{ maxWidth: 345, boxShadow: 'none', mx: 'auto', '& :hover': { boxShadow: 'none' } }}>
+        <Card sx={{ '&:hover': { background: '#99bf82', } }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
@@ -24,7 +24,7 @@ const Service = ({ image }) => {
                     <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                         Web & Mobile Design
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in illo exercitationem ratione provident, amet ipsum quasi, cupiditate corporis sunt assumenda natus dolorum? Amet, expedita harum distinctio iste delectus ipsum?
                     </Typography>
                 </CardContent>

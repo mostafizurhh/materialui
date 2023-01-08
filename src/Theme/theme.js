@@ -5,7 +5,7 @@ export const theme = createTheme({
         primary: {
             main: '#111430',
             yellow: '#FBD062',
-            green: '#7AB259'
+            green: '#6b8f55'
         },
     },
     components: {

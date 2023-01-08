@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 
+
 const drawerWidth = 170;
 const navItems = ['Home', 'About', 'Contact'];
 
@@ -57,10 +58,12 @@ function Header(props) {
             <AppBar component="nav" sx={{
                 backgroundColor: 'transparent',
                 boxShadow: 'none',
-                mt: 2
+                mt: 2,
+                p: 0,
+                position: 'static'
             }}>
-                <Container>
-                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Container sx={{ '& .MuiToolbar-root': { padding: '0px' } }}>
+                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', }}>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
